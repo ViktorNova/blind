@@ -22,7 +22,7 @@ local theme = blind.theme
 ------------------------------------------------------------------------------------------------------
 
 local default_height = 24
-
+theme.font           = "Enter Sansman Bold"
 theme.default_height = default_height
 
 local function d_mask(img,cr)
@@ -34,10 +34,10 @@ theme.path = path
 -- Background
 theme.bg = blind {
     normal      = "#000000",
-    focus       = "#496477",
+    focus       = "#00aaff",
     urgent      = "#5B0000",
-    minimize    = "#040A1A",
-    highlight   = "#0E2051",
+    minimize    = "#000996",
+    highlight   = "#00AAFF",
     alternate   = "#081B37",
     underlay    = "#191A1E",
     allinone    = { type = "linear", from = { 0, 0 }, to = { 0, 20 }, stops = { { 0, "#888888" }, { 1, "#4f4f4f" }}},
@@ -55,16 +55,16 @@ theme.bar_bg_alternate = theme.bar_bg_normal
 
 -- Forground
 theme.fg = blind {
-    normal   = "#DDDDDD",
-    focus    = "#ABCCEA",
+    normal   = "#00aaff",
+    focus    = "#000000",
     urgent   = "#FF7777",
-    minimize = "#1577D3",
+    minimize = "#000000",
     allinone = "#ADADAD",
 }
 
 -- Other
 theme.awesome_icon         = path .."Icon/awesome2.png"
-theme.systray_icon_spacing = 4
+theme.systray_icon_spacing = 6
 theme.button_bg_normal     = color.create_png_pattern(path .."Icon/bg/menu_bg_scifi.png"       )
 theme.enable_glow          = true
 theme.glow_color           = "#00000011"
@@ -327,16 +327,16 @@ theme.titlebar = blind {
     bg_focus  = theme.bar_bg_normal,
     height    = 18,
     bg = blind {
-        inactive = color{ type = "linear", from = { 0, 0 }, to = { 0, 12 }, stops = { { 0, "#5F6A76" }, { 1, "#3C444B" }}},
+        inactive = "#00AAFF",
         active   = "#ff0000",
-        hover    = "#0000ff",
-        pressed  = "#ffff00",
+        hover    = "#00AAFF",
+        pressed  = "#000000",
     },
     border_color = blind {
-        inactive = color{ type = "linear", from = { 0, 0 }, to = { 0, default_height }, stops = { { 0, "#3B434A" }, { 1, "#282d32" }}},
-        active   = "#ff00ff",
-        hover    = "#ff00ff",
-        pressed  = "#ffffff",
+        inactive = "#000000",
+        active   = "#00ffff",
+        hover    = "#000000",
+        pressed  = "#00AAFF",
     },
     bg_underlay = { type = "linear", from = { 0, 0 }, to = { 0, default_height }, stops = { { 0, "#3F474E" }, { 1, "#181B1E" }}},
 }
