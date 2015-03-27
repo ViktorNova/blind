@@ -29,12 +29,19 @@ theme.titlebar = blind {
     },
 
     maximized_button = blind {
-        normal_inactive = path .."Icon/titlebar/maximized_normal_inactive.png",
+        normal_inactive = path .."Icon/titlebar/maximized_maximized_normal_inactive.png",
         focus_inactive  = path .."Icon/titlebar/maximized_focus_inactive.png",
         normal_active   = path .."Icon/titlebar/maximized_normal_active.png",
         focus_active    = path .."Icon/titlebar/maximized_focus_active.png",
     },
 
+    minimized_button = blind {
+        normal_inactive = path .."Icon/titlebar/minimizednormal_inactive.png",
+        focus_inactive  = path .."Icon/titlebar/minimizedfocus_inactive.png",
+        normal_active   = path .."Icon/titlebar/minimizednormal_active.png",
+        focus_active    = path .."Icon/titlebar/minimizedfocus_active.png",
+    },
+    
     resize      = path .."Icon/titlebar/resize.png",
     tag         = path .."Icon/titlebar/tag.png",
     bg_focus    = theme.bg_normal,
