@@ -80,7 +80,7 @@ theme.allinone_icon        = "#ADADAD99"
 
 -- Border
 theme.border = blind {
-    width  = 1         ,
+    width  = 6         ,
     normal = "#1F1F1F" ,
     focus  = "#535d6c" ,
     marked = "#91231c" ,
