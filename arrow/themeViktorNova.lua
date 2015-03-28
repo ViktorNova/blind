@@ -52,7 +52,7 @@ theme.button_bg_normal            = color.create_png_pattern(path .."Icon/bg/men
 --theme.border_focus  = "#535d6c"
 --theme.border_marked = "#91231c"
 
-theme.border_width   = "100"
+theme.border_width   = "10"
 theme.border_normal  = "#1F1F1F"
 theme.border_focus   = "#535d6c"
 theme.border_marked  = "#91231c"
@@ -189,7 +189,7 @@ theme.menu = blind {
     submenu_icon         = path .."Icon/tags/arrow.png",
     height               = 20,
     width                = 170,
-    border_width         = 2,
+    border_width         = 6,
     opacity              = 0.9,
     fg_normal            = "#ffffff",
     corner_radius        = 5,
