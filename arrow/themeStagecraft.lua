@@ -56,9 +56,9 @@ theme.bar_bg_alternate = theme.bar_bg_normal
 -- Forground
 theme.fg = blind {
     normal   = "#00aaff",
-    focus    = "#000000",
+    focus    = "#00ffff",
     urgent   = "#FF7777",
-    minimize = "#000000",
+    minimize = "#00aaff",
     allinone = "#ADADAD",
 }
 
@@ -74,7 +74,7 @@ theme.bg_dock              = blind_pat.to_pattern(blind_pat.mask.noise(0.06,"#AA
 theme.fg_dock_1            = "#DDDDDD"
 theme.fg_dock_2            = "#DDDDDD"
 theme.dock_spacing         = 2
-theme.bg_systray           = theme.fg_normal
+theme.bg_systray           = theme.bg_normal
 theme.bg_resize_handler    = "#aaaaff55"
 theme.allinone_icon        = "#ADADAD99"
 
