@@ -42,17 +42,12 @@ theme.fg = blind {
     minimize = "#1577D3",
 }
 
-theme.bg_systray     = "#1590D7"
+theme.bg_systray     = "#000000"
 
 
 theme.button_bg_normal            = color.create_png_pattern(path .."Icon/bg/menu_bg_scifi.png"       )
 
---theme.border_width  = "1"
---theme.border_normal = "#555555"
---theme.border_focus  = "#535d6c"
---theme.border_marked = "#91231c"
-
-theme.border_width   = "10"
+theme.border_width   = "1"
 theme.border_normal  = "#1F1F1F"
 theme.border_focus   = "#535d6c"
 theme.border_marked  = "#91231c"
