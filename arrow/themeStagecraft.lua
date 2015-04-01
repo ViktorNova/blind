@@ -39,7 +39,7 @@ theme.bg = blind {
     focus       = "#00aaff",
     urgent      = "#5B0000",
     minimize    = "#000996",
-    highlight   = "#00AAFF",
+    highlight   = "#00ff00",
     alternate   = "#081B37",
     underlay    = "#191A1E",
     allinone    = { type = "linear", from = { 0, 0 }, to = { 0, 20 }, stops = { { 0, "#888888" }, { 1, "#4f4f4f" }}},
@@ -76,10 +76,17 @@ theme.naughty_border_color = theme.fg_normal
 theme.bg_dock              = blind_pat.to_pattern(blind_pat.mask.noise(0.06,"#AAAACC", blind_pat.sur.plain("#2F363B",default_height)))
 theme.fg_dock_1            = "#DDDDDD"
 theme.fg_dock_2            = "#DDDDDD"
-theme.dock_spacing         = 2
+theme.dock_spacing         = 4
 theme.bg_systray           = theme.bg_normal
 theme.bg_resize_handler    = "#aaaaff55"
 theme.allinone_icon        = "#ADADAD99"
+
+
+theme.taglist_bg_selected  = "#00ffff"
+theme.taglist_fg_selected  = "#000000"
+theme.selected_bg          = "#00ffff"
+theme.selected_fg          = "#000000"
+
 
 -- Border
 theme.border = blind {
