@@ -16,6 +16,8 @@ local function get_cols(state)
     return color(theme["titlebar_bg_"..state]),color(theme["titlebar_border_color_"..state])
 end
 
+--color(theme["titlebar_bg_normal = "#00aaff""]) -- V tried to set it, nope.
+
 local function gen_squares()
     for _,v in ipairs {"inactive","active", "hover", "pressed"} do
         local bg,border = get_cols(v)
@@ -52,6 +54,7 @@ local ontop     = base_square.active
 local sticky    = base_square.active
 local floating  = base_square.active
 local maximized = base_square.active
+local minimized = base_square.active
 
 theme.titlebar = blind {
     close_button = blind {

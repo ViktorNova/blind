@@ -1,3 +1,5 @@
+-- Stagecraft OS Theme
+-- Based on Blind "theme.lua" by Elv13
 local capi =  {timer=timer,client=client}
 local awful      = require( "awful"          )
 local color      = require( "gears.color"    )
@@ -12,7 +14,7 @@ local blind      = require( "blind"          )
 local blind_pat  = require( "blind.common.pattern" )
 local debug      = debug
 
-local path = debug.getinfo(1,"S").source:gsub("theme.lua",""):gsub("@","")
+local path = debug.getinfo(1,"S").source:gsub("themeStagecraft.lua",""):gsub("@","")
 
 local theme = blind.theme
 -- arrow.task.theme,arrow.tag.theme = theme,theme
@@ -52,9 +54,9 @@ theme.bg_systray     = theme.bg_normal
 
 theme.border_width   = "0"
 theme.border_width2  = "2"
-theme.border_normal  = "#555555"
-theme.border_focus   = "#535d6c"
-theme.border_marked  = "#91231c"
+theme.border_normal  = "#000000"
+theme.border_focus   = "#000966"
+theme.border_marked  = "#ffff00"
 
 theme.tasklist_plain_task_name     = true
 
@@ -129,8 +131,45 @@ theme.dock_icon_color = { type = "linear", from = { 0, 0 }, to = { 0, 55 }, stop
 theme.draw_underlay = themeutils.draw_underlay
 
 
+---------------  TITLEBAR ---------------------
+theme.titlebar = blind {
+--    bg_focus  = theme.bar_bg_normal, -- THIS DOESN"T WORK
+    height    = 18,
+
+    -- Titlebar Buttons background
+    bg = blind {
+        inactive = "#000000",
+        active   = "#000996", -- close button for inactive window
+        hover    = "#00AAFF", -- close button for active window
+        pressed  = "#000000",
+    },
+    -- Titlebar Buttons blurred border
+    border_color = blind {
+        inactive = "#000000",
+        active   = "#000996", -- close button for inactive window
+        hover    = "#000000", -- close button for active window
+        pressed  = "#00AAFF",
+    },
+    bg_underlay = { type = "linear", from = { 0, 0 }, to = { 0, default_height }, stops = { { 0, "#3F474E" }, { 1, "#181B1E" }}}, -- This doesn't work at the moment, but it's from themeZilla, so maybe I can port it over
+}
+
 -- Titlebar
-loadfile(theme.path .."bits/titlebar.lua")(theme,path)
+--loadfile(theme.path .."bits/titlebar_minde.lua")(theme,path) -- the square icons, but they don't yet change color
+loadfile(theme.path .."bits/titlebar_square.lua")(theme,path)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -- Layouts
 loadfile(theme.path .."bits/layout.lua")(theme,path)
