@@ -81,6 +81,7 @@ theme.bg_systray           = theme.bg_normal
 theme.bg_resize_handler    = "#aaaaff55"
 theme.allinone_icon        = "#ADADAD99"
 
+taglist_bg_focus           = "#ff0000"
 
 theme.taglist_bg_selected  = "#00ffff"
 theme.taglist_fg_selected  = "#000000"

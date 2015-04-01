@@ -52,7 +52,7 @@ theme.bg_systray     = theme.bg_normal
 
 theme.border_width   = "0"
 theme.border_width2  = "2"
-theme.border_nobg_normalrmal  = "#555555"
+theme.border_normal  = "#555555"
 theme.border_focus   = "#535d6c"
 theme.border_marked  = "#91231c"
 

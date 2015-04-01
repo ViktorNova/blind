@@ -87,6 +87,14 @@ theme.titlebar = blind {
         focus_active    = add_icon("active","maximized"),
     },
 
+    minimized_button = blind {
+    normal_inactive = add_icon("inactive","minimized"),
+    focus_inactive  = add_icon("inactive","minimized"),
+    normal_active   = add_icon("active","minimized"),
+    focus_active    = add_icon("active","minimized"),
+    },
+
+
     resize      = add_icon("active","maximized",path .."Icon/titlebar/resize.png"),
     tag         = add_icon("active","maximized",path .."Icon/titlebar/tag.png"),
     title_align = "left",
