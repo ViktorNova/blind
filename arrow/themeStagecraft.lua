@@ -15,6 +15,8 @@ local path = debug.getinfo(1,"S").source:gsub("theme.*",""):gsub("@","")
 
 local theme = blind.theme
 
+-- VIKTOR: Look somewhere around 150!
+
 ------------------------------------------------------------------------------------------------------
 --                                                                                                  --
 --                                    DEFAULT COLORS, FONT AND SIZE                                 --
@@ -56,9 +58,10 @@ theme.bar_bg_alternate = theme.bar_bg_normal
 -- Forground
 theme.fg = blind {
     normal   = "#00aaff",
-    focus    = "#00ffff",
+    focus    = "#000996",
+    active   = "#000000",
     urgent   = "#FF7777",
-    minimize = "#00aaff",
+    minimize = "#ff00ff", --- What is this?
     allinone = "#ADADAD",
 }
 
@@ -170,7 +173,7 @@ theme.taglist = blind {
         used      = "#7EA5E3",
         urgent    = "#FF7777",
         changed   = "#B78FEE",
-        highlight = "#000000",
+        highlight = "#00ffff",
         empty     = "#a0aab5ff",
         prefix    = "#CECECE",
     },
@@ -280,15 +283,15 @@ theme.menu = blind {
     width        = 170,
     border_width = 2,
     opacity      = 0.9,
-    fg_normal    = "#ffffff",
+    fg_normal    = "#00aaff",
     fg_focus     = "#148bf5ff",
     bg_focus     = selected_bg,
     bg_header    = color.create_png_pattern(path .."Icon/bg/menu_bg_header_scifi.png"),
-    bg_normal    = blind_pat.to_pattern(blind_pat.mask.noise(0.06,"#AAAACC", blind_pat.sur.plain("#2F363B",default_height))),
+    bg_normal    = blind_pat.to_pattern(blind_pat.mask.noise(0.06,"#AAAACC", blind_pat.sur.plain("#000000",default_height))),
     bg_highlight = color.create_png_pattern(path .."Icon/bg/menu_bg_highlight.png"   ),
     item_style   = radical.item.style.classic,
-    border_color = "#828282",
-    item_border_color = "#21262A",
+    border_color = "#000022",
+    item_border_color = "#000000",
 }
 
 -- theme.bottom_menu_style      = radical.style.grouped_3d
@@ -322,20 +325,23 @@ theme.shorter = blind {
 -- theme.draw_underlay = themeutils.draw_underlay
 
 
--- Titlebar
+---------------  TITLEBAR ---------------------
 theme.titlebar = blind {
     bg_focus  = theme.bar_bg_normal,
     height    = 18,
+
+    -- Titlebar Buttons background
     bg = blind {
-        inactive = "#00AAFF",
-        active   = "#ff0000",
-        hover    = "#00AAFF",
+        inactive = "#000000",
+        active   = "#000996", -- close button for inactive window
+        hover    = "#00AAFF", -- close button for active window
         pressed  = "#000000",
     },
+    -- Titlebar Buttons blurred border
     border_color = blind {
         inactive = "#000000",
-        active   = "#00ffff",
-        hover    = "#000000",
+        active   = "#000996", -- close button for inactive window
+        hover    = "#000000", -- close button for active window
         pressed  = "#00AAFF",
     },
     bg_underlay = { type = "linear", from = { 0, 0 }, to = { 0, default_height }, stops = { { 0, "#3F474E" }, { 1, "#181B1E" }}},
