@@ -28,22 +28,22 @@ end
 ------------------------------------------------------------------------------------------------------
 
 theme.default_height = 14
--- theme.font           = "terminus mono 13"
+theme.font           = "Enter Sansman Bold 12"
 theme.path           = path
 
-theme.bg_normal      = "#0A1535"
-theme.bg_focus       = "#003687"
+theme.bg_normal      = "#000000"
+theme.bg_focus       = "#00ffff"
 theme.bg_urgent      = "#5B0000"
 theme.bg_minimize    = "#040A1A"
 theme.bg_highlight   = "#0E2051"
 theme.bg_alternate   = "#0F2766"
 
-theme.fg_normal      = "#1577D3"
-theme.fg_focus       = "#00BBD7"
+theme.fg_normal      = "#00aaff"
+theme.fg_focus       = "#000000"
 theme.fg_urgent      = "#FF7777"
 theme.fg_minimize    = "#1577D3"
 
-theme.bg_systray     = theme.fg_normal
+theme.bg_systray     = theme.bg_normal
 
 --theme.border_width  = "1"
 --theme.border_normal = "#555555"
@@ -120,9 +120,9 @@ theme.awesome_icon              = path .."Icon/awesome2.png"
 theme.menu_height               = 20
 theme.menu_width                = 130
 theme.menu_border_width         = 2
-theme.border_width              = 1
+theme.border_width              = 6
 theme.border_color              = theme.fg_normal
-theme.wallpaper = "/home/lepagee/bg/final/bin_ascii_ds.png"
+theme.wallpaper = "~/Pictures/space.jpg"
 
 theme.dock_icon_color = { type = "linear", from = { 0, 0 }, to = { 0, 55 }, stops = { { 0, "#1889F2" }, { 1, "#083158" }}}
 
