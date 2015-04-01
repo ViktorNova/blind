@@ -138,19 +138,20 @@ theme.titlebar = blind {
 
     -- Titlebar Buttons background
     bg = blind {
-        inactive = "#000000",
-        active   = "#000996", -- close button for inactive window
-        hover    = "#00AAFF", -- close button for active window
-        pressed  = "#000000",
+        inactive = "#000000", -- Button background (all windows)
+        active   = "#000966", -- Pressed button background (all windows), close button for inactive window
+        hover    = "#ff0088", -- close button for active window
+        pressed  = "#000000"  -- ????
     },
     -- Titlebar Buttons blurred border
     border_color = blind {
-        inactive = "#000000",
-        active   = "#000996", -- close button for inactive window
-        hover    = "#000000", -- close button for active window
-        pressed  = "#00AAFF",
+        inactive = "#000000", -- Button border  (all windows)
+--      active   = "#000966", -- Pressed button border (all windows), close button border for inactive window
+        active   = "#000000", -- Pressed button border (all windows), close button border for inactive window
+        hover    = "#000000", -- close button border for active window
+        pressed  = "#ffAA00"  -- ????
     },
-    bg_underlay = { type = "linear", from = { 0, 0 }, to = { 0, default_height }, stops = { { 0, "#3F474E" }, { 1, "#181B1E" }}}, -- This doesn't work at the moment, but it's from themeZilla, so maybe I can port it over
+    --bg_underlay = { type = "linear", from = { 0, 0 }, to = { 0, default_height }, stops = { { 0, "#3F474E" }, { 1, "#181B1E" }}}, -- This doesn't work at the moment, but it's from themeZilla, so maybe I can port it over
 }
 
 -- Titlebar
