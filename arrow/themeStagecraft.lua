@@ -1,5 +1,7 @@
 -- Stagecraft OS Theme
 -- Based on Blind "theme.lua" by Elv13
+
+
 local capi =  {timer=timer,client=client}
 local awful      = require( "awful"          )
 local color      = require( "gears.color"    )
@@ -29,8 +31,8 @@ end
 --                                                                                                  --
 ------------------------------------------------------------------------------------------------------
 
-theme.default_height = 14
-theme.font           = "Enter Sansman Bold 12"
+theme.default_height = 14                       -- ????
+theme.font           = "Enter Sansman Bold 12"  -- Controls size of all titlebars and desktop bars
 theme.path           = path
 
 theme.bg_normal      = "#000000"
@@ -95,13 +97,13 @@ theme.taglist_fg_prefix                = theme.bg_normal
 -- theme.taglist_squares_sel              = function(wdg,m,t,objects,idx) return arrow.tag.gen_tag_bg(wdg,m,t,objects,idx,theme.taglist_bg_image_selected) end
 -- theme.taglist_squares_sel_empty        = function(wdg,m,t,objects,idx) return arrow.tag.gen_tag_bg(wdg,m,t,objects,idx,theme.taglist_bg_image_selected) end
 -- theme.taglist_squares_unsel_empty      = function(wdg,m,t,objects,idx) return arrow.tag.gen_tag_bg(wdg,m,t,objects,idx,nil)     end
--- theme.taglist_disable_icon             = true
+-- theme.taglist_disable_icon             = false -- ????
 -- theme.tasklist_bg_image_normal                  = function(wdg,m,t,objects) return arrow.task.gen_task_bg(wdg,m,t,objects,nil)     end
 -- theme.tasklist_bg_image_focus                   = function(wdg,m,t,objects) return arrow.task.gen_task_bg(wdg,m,t,objects,theme.taglist_bg_image_used)     end
 -- theme.tasklist_bg_image_urgent                  = function(wdg,m,t,objects) return arrow.task.gen_task_bg(wdg,m,t,objects,theme.taglist_bg_image_urgent)     end
 -- theme.tasklist_bg_image_minimize                = function(wdg,m,t,objects) return arrow.task.gen_task_bg(wdg,m,t,objects,nil)     end
 
-theme.tasklist_disable_icon            = true
+theme.tasklist_disable_icon            = false
 theme.monochrome_icons                 = true
 
 
@@ -132,24 +134,37 @@ theme.draw_underlay = themeutils.draw_underlay
 
 
 ---------------  TITLEBAR ---------------------
+-- Note this uses ./bits/titlebar_square.lua
+-- Further customization can be done there
+
 theme.titlebar = blind {
 --    bg_focus  = theme.bar_bg_normal, -- THIS DOESN"T WORK
-    height    = 18,
 
-    -- Titlebar Buttons background
+    -- Titlebar Buttons Resolution
+    --  the higher this is, the crisper and smaller the icon pngs and borders get,
+    --  and does affect the size of the actual titlebar (which is determined by font size)
+    height    = 30, -- This should be identical to the pixel height of titlebar button images to avoid any resizing
+
+--  Titlebar Colors
     bg = blind {
-        inactive = "#000000", -- Button background (all windows)
-        active   = "#000966", -- Pressed button background (all windows), close button for inactive window
-        hover    = "#ff0088", -- close button for active window
-        pressed  = "#000000"  -- ????
+    --  Titlebar main background:
+        focus    = "00aaff",
+    --  Titlebar buttons background:
+        inactive = "#00000000", -- Button background (ALL windows)
+        active   = "#000211",   -- Pressed button background (ALL windows), close button (inactive window)
+      --  hover    = "#cd3b3b",   -- Red X    close button for (current window)
+        hover    = "#ff0062",   -- Dk Pink  close button for (current window)
+      --hover    = "#cd3b3b",   -- Red X    close button for (current window)
+      --hover    = "#00aaff",   -- Dk Blue  close button for (current window)
+        pressed  = "#000000"    -- ????
     },
     -- Titlebar Buttons blurred border
     border_color = blind {
-        inactive = "#000000", -- Button border  (all windows)
---      active   = "#000966", -- Pressed button border (all windows), close button border for inactive window
-        active   = "#000000", -- Pressed button border (all windows), close button border for inactive window
-        hover    = "#000000", -- close button border for active window
-        pressed  = "#ffAA00"  -- ????
+        inactive = "#00000025", -- Button border  (ALL windows)
+        --active   = "#000966", -- Pressed button border (ALL windows), close button border (inactive window)
+        active   = "#00000050", -- Pressed button border (ALL windows), close button border (inactive window)
+        hover    = "#00000060", -- Close button border (current window)
+        pressed  = "#ff0000"    -- ????
     },
     --bg_underlay = { type = "linear", from = { 0, 0 }, to = { 0, default_height }, stops = { { 0, "#3F474E" }, { 1, "#181B1E" }}}, -- This doesn't work at the moment, but it's from themeZilla, so maybe I can port it over
 }
