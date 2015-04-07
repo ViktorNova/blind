@@ -35,6 +35,8 @@ theme.default_height = 14                       -- ????
 theme.font           = "Enter Sansman Bold 12"  -- Controls size of all titlebars and desktop bars
 theme.path           = path
 
+-- BAR COLORS
+-- These can probably be overwritten, see the comment at the beggining of the next section
 theme.bg_normal      = "#000000"
 theme.bg_focus       = "#00ffff"
 theme.bg_urgent      = "#5B0000"
@@ -57,7 +59,7 @@ theme.bg_systray     = theme.bg_normal
 theme.border_width   = "0"
 theme.border_width2  = "2"
 theme.border_normal  = "#000000"
-theme.border_focus   = "#000966"
+theme.border_focus   = "#00ffff"
 theme.border_marked  = "#ffff00"
 
 theme.tasklist_plain_task_name     = true
@@ -76,6 +78,10 @@ theme.tasklist_plain_task_name     = true
 -- titlebar_[bg|fg]_[normal|focus]
 -- Example:
 --taglist_bg_focus = #ff0000
+
+--titlebar_bg_focus  = "#00ffff"
+--titlebar_fg_focus  = "#000000"
+
 
 
 ------------------------------------------------------------------------------------------------------
