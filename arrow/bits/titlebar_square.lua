@@ -16,8 +16,6 @@ local function get_cols(state)
     return color(theme["titlebar_bg_"..state]),color(theme["titlebar_border_color_"..state])
 end
 
---color(theme["titlebar_bg_normal = "#00aaff""]) -- V tried to set it, nope.
-
 local function gen_squares()
     for _,v in ipairs {"inactive","active", "hover", "pressed"} do
         local bg,border = get_cols(v)
@@ -32,7 +30,7 @@ local function gen_squares()
         cr:set_source(bg)
         cr:fill_preserve()
         cr:set_source(border)
-        cr:set_line_width(2)
+        cr:set_line_width(4)
         cr:stroke()
         base_square[v] = img
     end
@@ -54,7 +52,6 @@ local ontop     = base_square.active
 local sticky    = base_square.active
 local floating  = base_square.active
 local maximized = base_square.active
-local minimized = base_square.active
 
 theme.titlebar = blind {
     close_button = blind {
@@ -91,11 +88,11 @@ theme.titlebar = blind {
     },
 
     minimized_button = blind {
-    normal_inactive = add_icon("inactive","minimized"),
-    focus_inactive  = add_icon("inactive","minimized"),
-    normal_active   = add_icon("active","minimized"),
-    focus_active    = add_icon("active","minimized"),
-    },
+    normal_inactive = path .."Icon/titlebar/minimizednormal_inactive.png",
+    focus_inactive  = path .."Icon/titlebar/minimizedfocus_inactive.png",
+    normal_active   = path .."Icon/titlebar/minimizednormal_active.png",
+    focus_active    = path .."Icon/titlebar/minimizedfocus_active.png",
+},
 
 
     resize      = add_icon("active","maximized",path .."Icon/titlebar/resize.png"),

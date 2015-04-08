@@ -7,6 +7,7 @@ local ontop     = surface(path .."Icon/titlebar_minde/ontop_normal.png"     )
 local sticky    = surface(path .."Icon/titlebar_minde/sticky_normal.png"    )
 local floating  = surface(path .."Icon/titlebar_minde/floating_normal.png"  )
 local maximized = surface(path .."Icon/titlebar_minde/maximized_normal.png" )
+local minimized = surface(path .."Icon/titlebar_minde/minimized_normal.png" )
 
 local active = theme.titlebar_icon_active or theme.titlebar_icon_fg or theme.fg_normal
 

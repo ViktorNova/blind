@@ -78,9 +78,8 @@ theme.tasklist_plain_task_name     = true
 -- titlebar_[bg|fg]_[normal|focus]
 -- Example:
 --taglist_bg_focus = #ff0000
-
---titlebar_bg_focus  = "#00ffff"
---titlebar_fg_focus  = "#000000"
+--theme.titlebar_bg_focus  = "#00ffff"
+--theme.titlebar_fg_focus  = "#000000"
 
 
 
@@ -154,7 +153,7 @@ theme.titlebar = blind {
 --  Titlebar Colors
     bg = blind {
     --  Titlebar main background:
-        focus    = "00aaff",
+        focus    = "00ffff",
     --  Titlebar buttons background:
         inactive = "#00000000", -- Button background (ALL windows)
         active   = "#000211",   -- Pressed button background (ALL windows), close button (inactive window)
